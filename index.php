@@ -19,27 +19,28 @@ function encuar_estils_web(){
   wp_enqueue_script('script_funcionalitats_pluguin', plugins_url( 'Pluguin_M09_Funcionalitats_WP/assets/js/codi.js'), array('jquery'), $versio);
 }
 add_action('wp_enqueue_scripts', 'encuar_estils_web');
-add_action('admin_enqueue_scripts', 'encuar_estils_web');
+//if (get_admin_page_title()=="Funcionalitats"){
+    add_action('admin_enqueue_scripts', 'encuar_estils_web');
+//}
 
-//Importarem el jQuery per poder utilitzar el fitxer
-//echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>';
+
 
 //Carreguem les funcionalitats
-include 'controladors\funcionalitats.php';
+include_once 'controladors\funcionalitats.php';
 //S'hi es la primera vegada que executa el pluguin activarem les taules a la BD
-comprobar_dadesPerDefecte();
+comprobarDadesPerDefecte();
 
 //Funcio que creara els menus i submenu dins del panel dadministracio del WP
-function crear_menu_pluguin(){
-  add_menu_page('Pluguin_M09', 'Pluguin_M09', 'manage_options', 'gestio-menu', 'crear_menu_general',plugins_url( 'Pluguin_M09_Funcionalitats_WP/assets/img/icona-pluguin-petit.png' ));
-  add_submenu_page( 'gestio-menu', 'Funcionalitats', 'Funcionalitats', 'manage_options', 'gestio-menu-funcionalitats', 'crear_menu_funcionalitats');
+function crear_menu_pluguin_funcionalitats(){
+  add_menu_page('Pluguin_M09', 'Pluguin_M09', 'manage_options', 'gestio-menus', 'crear_menu_general_funcionalitats',plugins_url( 'Pluguin_M09_Funcionalitats_WP/assets/img/icona-pluguin-petit.png' ));
+  add_submenu_page( 'gestio-menus', 'Funcionalitats', 'Funcionalitats', 'manage_options', 'gestio-menu-funcionalitats', 'crear_menu_funcionalitats');
 }
-add_action('admin_menu', 'crear_menu_pluguin');
+add_action('admin_menu', 'crear_menu_pluguin_funcionalitats');
 
 
-function crear_menu_general(){
-    include 'vistes/vista_generalInformacio.php';
+function crear_menu_general_funcionalitats(){
+    include_once 'vistes/vista_generalInformacio.php';
 }
 function crear_menu_funcionalitats(){
-    include 'vistes/vista_funcionalitats.php';
+    include_once 'vistes/vista_funcionalitats.php';
 }

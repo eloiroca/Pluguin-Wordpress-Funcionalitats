@@ -222,7 +222,8 @@
 }
 
 .btn_guardarParametres{
-    float: right;
+
+  width: 100%;
 }
 
 .panel-peu{
@@ -542,7 +543,7 @@ input#filtrar {
     width: 100%;
 }
 
-.totes_les_contrasenyes{
+.totes_les_documental{
     display: none;
 }
 
@@ -603,18 +604,18 @@ input#filtre_contrasenyes {
 }
 
 
-input[type=checkbox] + label {
+input[type=checkbox].checkbox_bonic + label {
   display: block;
   margin: 0.2em;
   cursor: pointer;
   padding: 0.2em;
 }
 
-input[type=checkbox] {
+input[type=checkbox].checkbox_bonic {
   display: none;
 }
 
-input[type=checkbox] + label:before {
+input[type=checkbox].checkbox_bonic + label:before {
   content: "\2714";
   border: 0.1em solid #000;
   border-radius: 0.2em;
@@ -629,11 +630,11 @@ input[type=checkbox] + label:before {
   transition: .2s;
 }
 
-input[type=checkbox] + label:active:before {
+input[type=checkbox].checkbox_bonic + label:active:before {
   transform: scale(0);
 }
 
-input[type=checkbox]:checked + label:before {
+input[type=checkbox].checkbox_bonic:checked + label:before {
   background-color: MediumSeaGreen;
   border-color: MediumSeaGreen;
   color: #fff;
@@ -672,4 +673,34 @@ input[type=checkbox]:checked + label:before {
 .row{
   margin-left: 0px !important;
   margin-right: 0px !important;
+}
+.text_funcionalitats{
+  text-align: center;
+}
+.avis_activacio{
+  color: #32BEA6;
+  font-size: 30px !important;
+  font-weight: bold;
+  font-style: italic;
+}
+.avis_modul{
+  color: #32BEA6;
+  font-size: 20px !important;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline #32BEA6;
+}
+
+.descripcio_modul{
+  text-align: justify;
+  font-size: 16px !important;
+}
+
+.hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px dotted #32BEA6;
+    margin: 1em 0;
+    padding: 0;
 }

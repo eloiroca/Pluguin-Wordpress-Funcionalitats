@@ -20,28 +20,11 @@
                       <p class="titol_parametres">Informació sobre el pluguin</p>
                   </div>
 
-                  <form>
-                      <div class="row">
-                        <div class="col-md-3">
-                          <input type="checkbox" id="documental" name="modul_documental" value="GestioDocumental">
-                          <label for="documental">Mòdul GestioCarpetes</label>
-                      </div>
-                      <div class="col-md-3">
-                          <input type="checkbox" id="contrasenyes" name="modul_contrasenyes" value="GestioContrasenyes">
-                          <label for="contrasenyes">Mòdul GestioContrasenyes</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="checkbox" id="codi" name="modul_codi" value="GestioCodi">
-                        <label for="codi">Mòdul GestioCodi</label>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="checkbox" id="backups" name="modul_backups" value="GestioBackups">
-                        <label for="backups">Mòdul GestioBackups</label>
-                    </div>
-                    </div>
-                  </form>
-                  <ul style="margin-left: 15px;"><li class="li_boleta">Ruta Carpetes</li></ul>
-
+                  <p class="descripcio_modul">Pluguin que ofereix unes funcionalitats específiques per tal de complementar el Wordpress de manera mes sencilla. Les funcionalitats principals que te el pluguin son les següents.</p>
+                  <ul style="margin-left: 15px;"><li class="li_boleta"><b>Biografies automàtiques: </b>Mitjançant la pujada d'un fitxer <b>CSV</b> crearà tantes entrades com files tingui el fitxer CSV, dins del CSV hi haurà el nom, cognom i població de les persones.</li></ul>
+                  <ul style="margin-left: 15px;"><li class="li_boleta"><b>Foto Loguin Personalitzada: </b>Mitjançant la pujada d'una imatge <b>JPG</b> substituirà la típica imatge de Wordpress del Login per la que hem pujat.</li></ul>
+                  <ul style="margin-left: 15px;"><li class="li_boleta"><b>Widget Hora: </b>Crearà un widget de la Hora actual de Catalunya que apareixerà en el <b>Dashboard</b>, en els <b>Widgets de Sidebar</b> i com un <b>Shortcode</b> que es podrà pegar a qualsevol pàgina de la web</li></ul>
+                  <ul style="margin-left: 15px;"><li class="li_boleta"><b>Barra personalitzada: </b> Crearà una barra a la part superior de les pàgines del Wordpress on podras ficar-li la ubicació, telèfon, correu i les xarxes socials.</li></ul>
 
                 </div>
 
